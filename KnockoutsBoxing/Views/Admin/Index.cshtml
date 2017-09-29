@@ -1,0 +1,19 @@
+﻿@model IEnumerable<KnockoutsBoxing.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Admin Panel";
+}
+
+
+<p>This is the Admin Page</p>
+
+@foreach (var item in Model)
+{
+    <li><p>@item.UserName  
+        @item.Id
+        @item.PhoneNumber
+        @item.PasswordHash
+        @item.TwoFactorEnabled
+           @Html.ActionLink("User Details", "UserDetails", new { UserName = item.UserName })
+           </p></li>
+}
+
