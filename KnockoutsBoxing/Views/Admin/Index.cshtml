@@ -8,12 +8,9 @@
 
 @foreach (var item in Model)
 {
-    <li><p>@item.UserName  
-        @item.Id
-        @item.PhoneNumber
-        @item.PasswordHash
-        @item.TwoFactorEnabled
-           @Html.ActionLink("User Details", "UserDetails", new { UserName = item.UserName })
+    <li><p>@item.UserName  | 
+           @Html.ActionLink("User Details", "UserDetails", new { UserName = item.UserName }) |
+           @Html.ActionLink("Change to Admin","ChangeToAdmin", new { UserName = item.UserName })
            </p></li>
 }
 
