@@ -31,6 +31,11 @@ namespace KnockoutsBoxing.Migrations
 
             var rolemanage1 = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             ir = rolemanage1.Create(new IdentityRole("Fan"));
+            ir = rolemanage1.Create(new IdentityRole("Promoter"));
+            ir = rolemanage1.Create(new IdentityRole("Boxer"));
+            ir = rolemanage1.Create(new IdentityRole("Moderator"));
+            ir = rolemanage1.Create(new IdentityRole("Administrator"));
+
         }
     }
 }
