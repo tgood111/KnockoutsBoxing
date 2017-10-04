@@ -1,69 +1,71 @@
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\csc.exe
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\vbc.exe
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\VBCSCompiler.exe
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\KnockoutsBoxing.dll.config
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\KnockoutsBoxing.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\KnockoutsBoxing.pdb
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Antlr3.Runtime.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.SqlServer.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Newtonsoft.Json.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Owin.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Helpers.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Mvc.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Optimization.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Razor.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Deployment.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Razor.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\WebGrease.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Helpers.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Mvc.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Optimization.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Razor.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Deployment.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Razor.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Antlr3.Runtime.pdb
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Newtonsoft.Json.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.SqlServer.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.csprojResolveAssemblyReference.cache
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.dll
-C:\Users\tgood\Desktop\CodingProjects\Knockoutsbitbucket\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.pdb
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\csc.exe
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\vbc.exe
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\VBCSCompiler.exe
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\KnockoutsBoxing.dll.config
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\KnockoutsBoxing.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\KnockoutsBoxing.pdb
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Antlr3.Runtime.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.SqlServer.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Newtonsoft.Json.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Owin.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Helpers.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Mvc.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Optimization.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Razor.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Deployment.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Razor.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\WebGrease.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Helpers.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Mvc.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Optimization.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.Razor.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Deployment.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\System.Web.WebPages.Razor.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Antlr3.Runtime.pdb
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Newtonsoft.Json.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\EntityFramework.SqlServer.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.dll
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.pdb
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.csprojResolveAssemblyReference.cache
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.Migrations.initial.resources
+C:\Users\virtualmain\Documents\Visual Studio 2017\Projects\knockoutsboxing\KnockoutsBoxing\obj\Debug\KnockoutsBoxing.csproj.GenerateResource.Cache

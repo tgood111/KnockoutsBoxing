@@ -1,0 +1,58 @@
+﻿@model KnockoutsBoxing.Models.Poll
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Poll</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PollName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PollName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PollCreationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PollCreationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PollBoxer1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PollBoxer1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PollBoxer2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PollBoxer2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PollClosingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PollClosingDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PollID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
