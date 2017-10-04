@@ -10,153 +10,115 @@ using KnockoutsBoxing.Models;
 
 namespace KnockoutsBoxing.Controllers
 {
-    public class PollsController : Controller
+    public class YesOrNoesController : Controller
     {
         private KnockoutsBoxingContext db = new KnockoutsBoxingContext();
 
-        #region standard CRUD stuff of Polls
-        // GET: Polls
+        // GET: YesOrNoes
         public ActionResult Index()
         {
-            return View(db.Polls.ToList());
+            var yesOrNos = db.YesOrNos.Include(y => y.Poll);
+            return View(yesOrNos.ToList());
         }
 
-        // GET: Polls/Details/5
+        // GET: YesOrNoes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Poll poll = db.Polls.Find(id);
-            if (poll == null)
+            YesOrNo yesOrNo = db.YesOrNos.Find(id);
+            if (yesOrNo == null)
             {
                 return HttpNotFound();
             }
-            return View(poll);
+            return View(yesOrNo);
         }
 
-        // GET: Polls/Create
+        // GET: YesOrNoes/Create
         public ActionResult Create()
         {
+            ViewBag.PollID = new SelectList(db.Polls, "PollID", "PollName");
             return View();
         }
 
-        // POST: Polls/Create
+        // POST: YesOrNoes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PollID,PollName,PollCreationDate,PollBoxer1,PollBoxer2,PollClosingDate")] Poll poll)
+        public ActionResult Create([Bind(Include = "YesOrNoID,FansSaidYesOrNO,PollID")] YesOrNo yesOrNo)
         {
             if (ModelState.IsValid)
             {
-                db.Polls.Add(poll);
+                db.YesOrNos.Add(yesOrNo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(poll);
+            ViewBag.PollID = new SelectList(db.Polls, "PollID", "PollName", yesOrNo.PollID);
+            return View(yesOrNo);
         }
 
-        // GET: Polls/Edit/5
+        // GET: YesOrNoes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Poll poll = db.Polls.Find(id);
-            if (poll == null)
+            YesOrNo yesOrNo = db.YesOrNos.Find(id);
+            if (yesOrNo == null)
             {
                 return HttpNotFound();
             }
-            return View(poll);
+            ViewBag.PollID = new SelectList(db.Polls, "PollID", "PollName", yesOrNo.PollID);
+            return View(yesOrNo);
         }
 
-        // POST: Polls/Edit/5
+        // POST: YesOrNoes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PollID,PollName,PollCreationDate,PollBoxer1,PollBoxer2,PollClosingDate")] Poll poll)
+        public ActionResult Edit([Bind(Include = "YesOrNoID,FansSaidYesOrNO,PollID")] YesOrNo yesOrNo)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(poll).State = EntityState.Modified;
+                db.Entry(yesOrNo).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(poll);
+            ViewBag.PollID = new SelectList(db.Polls, "PollID", "PollName", yesOrNo.PollID);
+            return View(yesOrNo);
         }
 
-        // GET: Polls/Delete/5
+        // GET: YesOrNoes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Poll poll = db.Polls.Find(id);
-            if (poll == null)
+            YesOrNo yesOrNo = db.YesOrNos.Find(id);
+            if (yesOrNo == null)
             {
                 return HttpNotFound();
             }
-            return View(poll);
+            return View(yesOrNo);
         }
 
-        // POST: Polls/Delete/5
+        // POST: YesOrNoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Poll poll = db.Polls.Find(id);
-            db.Polls.Remove(poll);
+            YesOrNo yesOrNo = db.YesOrNos.Find(id);
+            db.YesOrNos.Remove(yesOrNo);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
-        #endregion
-
-        #region AdditionalMethods
-
-
-        /*        // GET: Cats/Details/5
-        public ActionResult SeeAllToys(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Cat cat = db.Cats.Find(id);
-            ViewBag.CatName = cat.CatName;
-            var listoftoys = cat.ToyPurchaseDates;
-            if (cat == null)
-            {
-                return HttpNotFound();
-            }
-            return View(listoftoys.ToList());
-        }
-         */
-        //method to see all the votes.
-        // GET: YesOrNoes
-        public ActionResult ShowAllVotes(int? id)
-        {
-            //var yesOrNos = db.YesOrNos.Include(y => y.Poll);
-            //return View(yesOrNos.ToList());
-
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            Poll poll = db.Polls.Find(id);
-
-            ViewBag.PollName = poll.PollName;
-
-            return View();
-        }
-        #endregion
 
         protected override void Dispose(bool disposing)
         {

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<KnockoutsBoxing.Models.YesOrNo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Poll.PollName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FansSaidYesOrNO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Poll.PollName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FansSaidYesOrNO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.YesOrNoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.YesOrNoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.YesOrNoID })
+        </td>
+    </tr>
+}
+
+</table>
