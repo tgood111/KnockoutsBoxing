@@ -50,7 +50,15 @@
             @Html.ActionLink("Edit", "Edit", new { id=item.PollID }) |
             @Html.ActionLink("Details", "Details", new { id=item.PollID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.PollID }) |
-            @Html.ActionLink("Show All Votes", "ShowAllVotes", new { id = item.PollID })
+            @Html.ActionLink("Show All Votes", "ShowAllVotes", new { id = item.PollID }) |
+            @Html.ActionLink("Yes", "YesToFight", new { id = item.PollID }) |
+            @Html.ActionLink("No", "NoToFight", new { id = item.PollID })
+
+
+
+            
+            
+
 
         </td>
     </tr>

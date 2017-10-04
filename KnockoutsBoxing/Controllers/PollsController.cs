@@ -154,7 +154,79 @@ namespace KnockoutsBoxing.Controllers
 
             ViewBag.PollName = poll.PollName;
 
+            var listofvotes = poll.PollYesOrNoCollection;
+            var countofvotes = listofvotes.Count;
+            int countofyesvotes = 0;
+            int countofnovotes = 0;
+
+            for(int i=0;i<countofvotes;i++)
+            {
+                if(listofvotes.ElementAt(i).FansSaidYesOrNO == true)
+                {
+                    //this means, vote is true
+                    countofyesvotes++;
+                }
+                else
+                {
+                    countofnovotes++;
+                }
+            }
+
+            ViewBag.CountYesVotes = countofyesvotes;
+            ViewBag.CountNoVotes = countofnovotes;
+            ViewBag.TotalVotes = countofnovotes + countofyesvotes;
+
             return View();
+        }
+
+        public ActionResult YesToFight(int? id)
+        {
+            //var yesOrNos = db.YesOrNos.Include(y => y.Poll);
+            //return View(yesOrNos.ToList());
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Poll poll = db.Polls.Find(id);
+
+            ViewBag.PollName = poll.PollName;
+
+            YesOrNo yesorno = new YesOrNo();
+            yesorno.FansSaidYesOrNO = true;
+            yesorno.PollID = poll.PollID;
+
+            db.YesOrNos.Add(yesorno);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+            //return View();
+        }
+
+        public ActionResult NoToFight(int? id)
+        {
+            //var yesOrNos = db.YesOrNos.Include(y => y.Poll);
+            //return View(yesOrNos.ToList());
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Poll poll = db.Polls.Find(id);
+
+            ViewBag.PollName = poll.PollName;
+
+            YesOrNo yesorno = new YesOrNo();
+            yesorno.FansSaidYesOrNO = false;
+            yesorno.PollID = poll.PollID;
+
+            db.YesOrNos.Add(yesorno);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+            //return View();
         }
         #endregion
 
