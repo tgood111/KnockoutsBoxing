@@ -33,6 +33,8 @@ namespace KnockoutsBoxing.Models
         public DbSet<Poll> Polls { get; set; }
         public DbSet<YesOrNo> YesOrNos { get; set; }
 
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }
 

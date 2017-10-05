@@ -1,0 +1,53 @@
+﻿@model IEnumerable<KnockoutsBoxing.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleCreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArticleContent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleCreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArticleContent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ArticleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArticleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ArticleID }) |
+            @Html.ActionLink("Show All Comments", "ShowAllComments", new { id = item.ArticleID }) |
+            @Html.ActionLink("Add Comment", "AddComment", new { id = item.ArticleID }) 
+        </td>
+    </tr>
+}
+
+</table>
