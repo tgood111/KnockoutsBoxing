@@ -7,9 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KnockoutsBoxing.Models;
+using Microsoft.AspNet.Identity;
 
 namespace KnockoutsBoxing.Controllers
 {
+    [Authorize(Roles = "Administrator,Moderator,Promoter,Boxer,Fan")]
     public class ArticlesController : Controller
     {
         private KnockoutsBoxingContext db = new KnockoutsBoxingContext();
@@ -18,6 +20,26 @@ namespace KnockoutsBoxing.Controllers
         #region standard CRUD stuff
         // GET: Articles
         public ActionResult Index()
+        {
+            return View(db.Articles.ToList());
+        }
+
+        //ListOfAllArticles
+        public ActionResult ListOfAllArticles()
+        {
+            return View(db.Articles.ToList());
+        }
+
+        //ListOfAllPollsUser
+        public ActionResult ListOfAllPollsUser()
+        {
+            var user = User.Identity.Name;
+            
+         
+            return View();
+        }
+
+        public ActionResult IndexSimple()
         {
             return View(db.Articles.ToList());
         }
@@ -92,6 +114,7 @@ namespace KnockoutsBoxing.Controllers
         }
 
         // GET: Articles/Delete/5
+        [Authorize(Roles = "Administrator,Moderator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,6 +132,7 @@ namespace KnockoutsBoxing.Controllers
         // POST: Articles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator,Moderator")]
         public ActionResult DeleteConfirmed(int id)
         {
             Article article = db.Articles.Find(id);

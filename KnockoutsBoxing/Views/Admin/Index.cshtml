@@ -6,15 +6,10 @@
 
 <p>This is the Admin Page</p>
 
-@foreach (var item in Model)
-{
-    <li><p>@item.UserName  | 
-           @Html.ActionLink("User Details", "UserDetails", new { UserName = item.UserName }) |
-           @Html.ActionLink("Change to Fan", "ChangeToFan", new { UserName = item.UserName }) |
-           @Html.ActionLink("Change to Boxer", "ChangeToBoxer", new { UserName = item.UserName }) |
-           @Html.ActionLink("Change to Moderator", "ChangeToModerator", new { UserName = item.UserName }) |
-           @Html.ActionLink("Change to Admin", "ChangeToAdmin", new { UserName = item.UserName }) |
-           @Html.ActionLink("Change to Promotor", "ChangeToPromotor", new { UserName = item.UserName } )
-           </p></li>
-}
+<p>List of All Users Here -  @Html.ActionLink("List Of All Users", "ListOfAllUsers", "Admin")</p>
 
+<p>List of All Polls Here -  @Html.ActionLink("List Of All Polls", "ListOfAllPolls", "Polls")</p>
+
+<p>List of All Articles Here -  @Html.ActionLink("List Of All Articles", "ListOfAllArticles", "Articles")</p>
+
+<p>List of All Comments Here -  @Html.ActionLink("List Of All Comments", "ListOfAllComments", "Comments")</p>

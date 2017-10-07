@@ -1,0 +1,67 @@
+﻿@model IEnumerable<KnockoutsBoxing.Models.Poll>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PollName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PollCreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PollBoxer1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PollBoxer2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PollClosingDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PollName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PollCreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PollBoxer1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PollBoxer2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PollClosingDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PollID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PollID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PollID }) |
+            @Html.ActionLink("Show All Votes", "ShowAllVotes", new { id = item.PollID }) |
+            @Html.ActionLink("Yes", "YesToFight", new { id = item.PollID }) |
+            @Html.ActionLink("No", "NoToFight", new { id = item.PollID })
+
+
+
+            
+            
+
+
+        </td>
+    </tr>
+}
+
+</table>

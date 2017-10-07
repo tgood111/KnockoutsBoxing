@@ -10,12 +10,20 @@ using KnockoutsBoxing.Models;
 
 namespace KnockoutsBoxing.Controllers
 {
+    [Authorize(Roles = "Administrator,Moderator,Promoter,Boxer,Fan")]
     public class CommentsController : Controller
     {
         private KnockoutsBoxingContext db = new KnockoutsBoxingContext();
 
         // GET: Comments
         public ActionResult Index()
+        {
+            var comments = db.Comments.Include(c => c.Article);
+            return View(comments.ToList());
+        }
+
+        //ListOfAllComments
+        public ActionResult ListOfAllComments()
         {
             var comments = db.Comments.Include(c => c.Article);
             return View(comments.ToList());

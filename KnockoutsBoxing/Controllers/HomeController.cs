@@ -8,10 +8,12 @@ namespace KnockoutsBoxing.Controllers
 {
     public class HomeController : Controller
     {
+        //I dont want to restrict Home i.e. Index
         public ActionResult Index()
         {
             return View();
         }
+
 
         public ActionResult About()
         {

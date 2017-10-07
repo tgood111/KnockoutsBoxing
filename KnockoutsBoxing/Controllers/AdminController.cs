@@ -9,11 +9,21 @@ using System.Web.Mvc;
 
 namespace KnockoutsBoxing.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: Admin
         public ActionResult Index()
+        {
+            //var listofallusers = db.Users.OrderBy(x => x.Email);
+            var listofallusers = db.Users.OrderBy(x => x.Email);
+            int count = listofallusers.Count();
+
+            return View(listofallusers);
+        }
+
+        public ActionResult ListOfAllUsers()
         {
             //var listofallusers = db.Users.OrderBy(x => x.Email);
             var listofallusers = db.Users.OrderBy(x => x.Email);
@@ -51,6 +61,7 @@ namespace KnockoutsBoxing.Controllers
 
         }
 
+        #region Role Change 
         //public async Task<ActionResult> UserUpgradeToCanSee(string UserName)
         //ChangeToAdmin
 
@@ -238,6 +249,8 @@ namespace KnockoutsBoxing.Controllers
         //UserManage is like a proxy for doing db operations on the user object
         //its pretty userful
         private ApplicationUserManager _userManager;
+
+        #endregion
     }
 
 
