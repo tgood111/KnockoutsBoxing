@@ -28,13 +28,30 @@ namespace KnockoutsBoxing.Controllers
             return View(db.Polls.ToList());
         }
 
+        //ListOfAllPollsUser
+        public ActionResult ListOfAllPollsUser()
+        {
+            /*var queryLondonCustomers = from cust in customers
+                           where cust.City == "London"
+                           select cust;
+             */
+
+            //get all posts
+            var allpolls = db.Polls;
+
+            string currentuser = User.Identity.Name;
+            var currentuserpolls = from poll in allpolls where poll.PollCreatedBy == currentuser select poll;
+
+            return View(currentuserpolls.ToList());
+        }
+
         public ActionResult IndexSimple()
         {
             return View(db.Polls.ToList());
         }
 
         // GET: Polls/Details/5
-        [Authorize(Roles = "Fan")]
+
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -49,7 +66,7 @@ namespace KnockoutsBoxing.Controllers
             return View(poll);
         }
 
-        [Authorize(Roles = "Fan")]
+
         // GET: Polls/Create
         public ActionResult Create()
         {
@@ -62,9 +79,11 @@ namespace KnockoutsBoxing.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Fan")]
+
         public ActionResult Create([Bind(Include = "PollID,PollName,PollCreationDate,PollBoxer1,PollBoxer2,PollClosingDate")] Poll poll)
         {
+            var user = User.Identity.Name;
+            poll.PollCreatedBy = user;
             if (ModelState.IsValid)
             {
                 db.Polls.Add(poll);
@@ -158,7 +177,7 @@ namespace KnockoutsBoxing.Controllers
          */
         //method to see all the votes.
         // GET: YesOrNoes
-        [Authorize(Roles = "Fan")]
+
         public ActionResult ShowAllVotes(int? id)
         {
             //var yesOrNos = db.YesOrNos.Include(y => y.Poll);
@@ -213,6 +232,8 @@ namespace KnockoutsBoxing.Controllers
             ViewBag.PollName = poll.PollName;
 
             YesOrNo yesorno = new YesOrNo();
+            var user = User.Identity.Name;
+            yesorno.YesOrNoCreatedBy = user;
             yesorno.FansSaidYesOrNO = true;
             yesorno.PollID = poll.PollID;
 
@@ -238,6 +259,8 @@ namespace KnockoutsBoxing.Controllers
             ViewBag.PollName = poll.PollName;
 
             YesOrNo yesorno = new YesOrNo();
+            var user = User.Identity.Name;
+            yesorno.YesOrNoCreatedBy = user;
             yesorno.FansSaidYesOrNO = false;
             yesorno.PollID = poll.PollID;
 

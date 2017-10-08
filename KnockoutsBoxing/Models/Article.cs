@@ -18,6 +18,8 @@ namespace KnockoutsBoxing.Models
 
         public string ArticleContent { get; set; }
 
+        public string ArticleCreatedBy { get; set; }
+
         //Collection of foreign keys
         public virtual ICollection<Comment> Comments { get; set; }
     }

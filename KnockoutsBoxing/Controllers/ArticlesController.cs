@@ -21,6 +21,8 @@ namespace KnockoutsBoxing.Controllers
         // GET: Articles
         public ActionResult Index()
         {
+            var user = User.Identity.Name;
+
             return View(db.Articles.ToList());
         }
 
@@ -30,13 +32,16 @@ namespace KnockoutsBoxing.Controllers
             return View(db.Articles.ToList());
         }
 
-        //ListOfAllPollsUser
-        public ActionResult ListOfAllPollsUser()
+        //ListOfAllArticlesUser
+        public ActionResult ListOfAllArticlesUser()
         {
-            var user = User.Identity.Name;
-            
+
+            var allarticles = db.Articles;
+            string currentuser = User.Identity.Name;
+
+            var currentuserarticles = from article in allarticles where article.ArticleCreatedBy == currentuser select article;
          
-            return View();
+            return View(currentuserarticles.ToList());
         }
 
         public ActionResult IndexSimple()
@@ -72,6 +77,8 @@ namespace KnockoutsBoxing.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ArticleID,ArticleTitle,ArticleCreationDate,ArticleAuthor,ArticleContent")] Article article)
         {
+            var user = User.Identity.Name;
+            article.ArticleCreatedBy = user;
             if (ModelState.IsValid)
             {
                 db.Articles.Add(article);
@@ -189,6 +196,9 @@ namespace KnockoutsBoxing.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult AddComment([Bind(Include = "CommentID,CommentContent,CommentAuthor,ArticleID")] Comment comment)
         {
+            var user = User.Identity.Name;
+            comment.CommentCreatedBy = user;
+
             if (ModelState.IsValid)
             {
                 db.Comments.Add(comment);

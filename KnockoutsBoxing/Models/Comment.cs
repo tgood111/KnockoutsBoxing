@@ -8,6 +8,8 @@
 
         public string CommentAuthor { get; set; }
 
+        public string CommentCreatedBy { get; set; }
+
         //Foreign Key
         public int ArticleID { get; set; }
 

@@ -29,6 +29,17 @@ namespace KnockoutsBoxing.Controllers
             return View(comments.ToList());
         }
 
+        //ListOfAllCommentsUser
+        public ActionResult ListOfAllCommentsUser()
+        {
+            var allcomments = db.Comments;
+
+            string currentuser = User.Identity.Name;
+
+            var currentusercomments = from comment in allcomments where comment.CommentCreatedBy == currentuser select comment;
+            return View(currentusercomments.ToList());
+        }
+
         // GET: Comments/Details/5
         public ActionResult Details(int? id)
         {

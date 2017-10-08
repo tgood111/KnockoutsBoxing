@@ -22,6 +22,8 @@ namespace KnockoutsBoxing.Models
 
         public DateTime PollClosingDate { get; set; }
 
+        public string PollCreatedBy { get; set; }
+
         //public virtual ICollection<ToyPurchaseDate> ToyPurchaseDates { get; set; }
         //Collection of foreign keys
         public virtual ICollection<YesOrNo> PollYesOrNoCollection { get; set; }

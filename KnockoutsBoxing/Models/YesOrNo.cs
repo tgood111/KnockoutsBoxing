@@ -7,6 +7,8 @@
 
         public bool FansSaidYesOrNO { get; set; }
 
+        public string YesOrNoCreatedBy { get; set; }
+
         //Foreign Key
         public int PollID { get; set; }
 
