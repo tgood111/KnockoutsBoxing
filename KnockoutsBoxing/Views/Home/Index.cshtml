@@ -1,4 +1,6 @@
-﻿@{
+﻿@model KnockoutsBoxing.Models.PollArticleUsers
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -13,17 +15,88 @@
         <h2>Articles</h2>
         <p>
             All the articles of the website
+            
         </p>
         <p>@Html.ActionLink("Articles", "Index", "Articles")</p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Articles.ElementAt(0).ArticleTitle)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Articles)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ArticleTitle)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.ArticleID })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
     </div>
     <div class="col-md-4">
         <h2>Polls</h2>
         <p>all the polls of the website</p>
         <p>@Html.ActionLink("Polls", "Index", "Polls")</p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Polls.ElementAt(0).PollName)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Polls)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PollName)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.PollID})
+                    </td>
+                </tr>
+            }
+
+        </table>
+
     </div>
     <div class="col-md-4">
         <h2>Other Stuff</h2>
         <p>some other stuff</p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Articles.ElementAt(0).ArticleTitle)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Articles)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ArticleTitle)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.ArticleID }) 
+                    </td>
+                </tr>
+            }
+
+        </table>
 
     </div>
 </div>
