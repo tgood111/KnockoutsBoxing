@@ -32,6 +32,57 @@ namespace KnockoutsBoxing.Controllers
             return View(listofallusers);
         }
 
+        //@Html.ActionLink("Ban User", "BanUser", new { UserName = item.UserName}) |
+        public async Task<ActionResult> BanUser(string UserName)
+        {
+            /*
+             *             //This will collect the user with the sent user name
+            var tempuser = UserManager.Users.First(x => x.UserName.Equals(UserName));
+            //this will collect the user role 
+            var temp = await UserManager.GetRolesAsync(tempuser.Id);
+            ViewBag.ObtainedUserRole = temp[0];
+            return View(tempuser);
+             */
+
+            //first I would like to get the User whom's role I want to see
+            var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(UserName));
+
+            //Important Note - if phone number is 9999999999 user is blocked
+            //this is used in Login method of AccountController
+            CurrentUser.PhoneNumber = "9999999999";
+
+            return View();
+
+
+        }
+
+        //   @Html.ActionLink("Remove Ban", "RemoveBanUser", new { UserName = item.UserName})
+
+        public async Task<ActionResult> RemoveBanUser(string UserName)
+        {
+            /*
+             *             //This will collect the user with the sent user name
+            var tempuser = UserManager.Users.First(x => x.UserName.Equals(UserName));
+            //this will collect the user role 
+            var temp = await UserManager.GetRolesAsync(tempuser.Id);
+            ViewBag.ObtainedUserRole = temp[0];
+            return View(tempuser);
+             */
+
+            //first I would like to get the User whom's role I want to see
+            var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(UserName));
+
+
+            //Important Note - if phone number is 9999999999 user is blocked
+            //changing it to something else makes is nonblocked
+            //this is used in Login method of AccountController
+            CurrentUser.PhoneNumber = "";
+
+            return View();
+
+
+        }
+
         //public async Task<ActionResult> UserDetails(string UserName)
         public async Task<ActionResult> UserDetails(string UserName)
         {

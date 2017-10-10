@@ -79,7 +79,22 @@ namespace KnockoutsBoxing.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    {
+                        string currentuser = model.Email;
+                        var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(currentuser));
+                        bool blocked = false;
+                        if (CurrentUser.PhoneNumber == "9999999999")
+                        {
+                            blocked = true;
+                        }
+                        
+                        if(blocked)
+                        {
+                            return RedirectToAction("BannedUser");
+                        }
+                        return RedirectToLocal(returnUrl);
+                    }
+                    
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -89,6 +104,11 @@ namespace KnockoutsBoxing.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+        }
+
+        public ActionResult BannedUser()
+        {
+            return View(); 
         }
 
         //
