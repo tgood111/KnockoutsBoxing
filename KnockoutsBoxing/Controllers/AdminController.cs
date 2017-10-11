@@ -49,8 +49,16 @@ namespace KnockoutsBoxing.Controllers
 
             //Important Note - if phone number is 9999999999 user is blocked
             //this is used in Login method of AccountController
-            CurrentUser.PhoneNumber = "9999999999";
-
+            //CurrentUser.PhoneNumber = "9999999999";
+            try
+            {
+                var result = await UserManager.SetPhoneNumberAsync(CurrentUser.Id, "9999999999");
+            }
+            catch
+            {
+                string temp = "something went wrong";
+            }
+            
             return View();
 
 
@@ -60,26 +68,14 @@ namespace KnockoutsBoxing.Controllers
 
         public async Task<ActionResult> RemoveBanUser(string UserName)
         {
-            /*
-             *             //This will collect the user with the sent user name
-            var tempuser = UserManager.Users.First(x => x.UserName.Equals(UserName));
-            //this will collect the user role 
-            var temp = await UserManager.GetRolesAsync(tempuser.Id);
-            ViewBag.ObtainedUserRole = temp[0];
-            return View(tempuser);
-             */
-
             //first I would like to get the User whom's role I want to see
             var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(UserName));
-
-
+            
             //Important Note - if phone number is 9999999999 user is blocked
             //changing it to something else makes is nonblocked
             //this is used in Login method of AccountController
-            CurrentUser.PhoneNumber = "";
-
+            await UserManager.SetPhoneNumberAsync(CurrentUser.UserName, "");
             return View();
-
 
         }
 

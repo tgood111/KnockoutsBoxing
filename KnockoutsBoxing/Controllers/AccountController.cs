@@ -73,6 +73,19 @@ namespace KnockoutsBoxing.Controllers
                 return View(model);
             }
 
+            string currentuser = model.Email;
+            var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(currentuser));
+            bool blocked = false;
+            if (CurrentUser.PhoneNumber == "9999999999")
+            {
+                blocked = true;
+            }
+
+            if (blocked)
+            {
+                return RedirectToAction("BannedUser");
+            }
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
@@ -80,18 +93,7 @@ namespace KnockoutsBoxing.Controllers
             {
                 case SignInStatus.Success:
                     {
-                        string currentuser = model.Email;
-                        var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(currentuser));
-                        bool blocked = false;
-                        if (CurrentUser.PhoneNumber == "9999999999")
-                        {
-                            blocked = true;
-                        }
-                        
-                        if(blocked)
-                        {
-                            return RedirectToAction("BannedUser");
-                        }
+
                         return RedirectToLocal(returnUrl);
                     }
                     
