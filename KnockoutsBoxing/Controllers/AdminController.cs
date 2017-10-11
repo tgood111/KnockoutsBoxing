@@ -23,7 +23,46 @@ namespace KnockoutsBoxing.Controllers
             return View(listofallusers);
         }
 
+        [Authorize(Roles = "Moderator,Administrator")]
+        public ActionResult ModeratorIndex()
+        {
+            //var listofallusers = db.Users.OrderBy(x => x.Email);
+            var listofallusers = db.Users.OrderBy(x => x.Email);
+            int count = listofallusers.Count();
+
+            return View(listofallusers);
+        }
+
+        [Authorize(Roles = "Promoter,Administrator")]
+        public ActionResult PromotorIndex()
+        {
+            //var listofallusers = db.Users.OrderBy(x => x.Email);
+            var listofallusers = db.Users.OrderBy(x => x.Email);
+            int count = listofallusers.Count();
+
+            return View(listofallusers);
+        }
+
+        [Authorize(Roles = "Fighter,Administrator")]
+        public ActionResult FighterIndex()
+        {
+            //var listofallusers = db.Users.OrderBy(x => x.Email);
+            var listofallusers = db.Users.OrderBy(x => x.Email);
+            int count = listofallusers.Count();
+
+            return View(listofallusers);
+        }
+
         public ActionResult ListOfAllUsers()
+        {
+            //var listofallusers = db.Users.OrderBy(x => x.Email);
+            var listofallusers = db.Users.OrderBy(x => x.Email);
+            int count = listofallusers.Count();
+
+            return View(listofallusers);
+        }
+
+        public ActionResult ListOfAllUsersModerator()
         {
             //var listofallusers = db.Users.OrderBy(x => x.Email);
             var listofallusers = db.Users.OrderBy(x => x.Email);

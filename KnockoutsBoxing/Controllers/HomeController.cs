@@ -26,6 +26,11 @@ namespace KnockoutsBoxing.Controllers
             return View(pollarticleusers);
         }
 
+        public ActionResult BannedUser()
+        {
+            return View();
+        }
+
 
         public ActionResult About()
         {

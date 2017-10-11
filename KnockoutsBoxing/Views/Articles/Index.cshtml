@@ -4,24 +4,22 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Article", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ArticleTitle)
+            <p>Article Title</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ArticleCreationDate)
+            <p>Article Created</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ArticleAuthor)
+            <p>Author</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ArticleContent)
+            <p>Content</p>
         </th>
         <th></th>
     </tr>

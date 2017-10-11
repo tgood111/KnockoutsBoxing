@@ -79,6 +79,8 @@ namespace KnockoutsBoxing.Controllers
         {
             var user = User.Identity.Name;
             article.ArticleCreatedBy = user;
+            article.ArticleCreationDate = DateTime.Now;
+            article.ArticleAuthor = user;
             if (ModelState.IsValid)
             {
                 db.Articles.Add(article);

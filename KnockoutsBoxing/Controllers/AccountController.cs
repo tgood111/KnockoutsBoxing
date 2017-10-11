@@ -83,7 +83,8 @@ namespace KnockoutsBoxing.Controllers
 
             if (blocked)
             {
-                return RedirectToAction("BannedUser");
+                //return RedirectToAction("BannedUser");
+                return RedirectToAction("BannedUser", "Home");
             }
 
             // This doesn't count login failures towards account lockout

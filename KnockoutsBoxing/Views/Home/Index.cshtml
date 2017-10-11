@@ -4,9 +4,9 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>KnockoutsBoxing</h1>
-    <p class="lead">KnockoutsBoxing website with polls and articles</p>
+<div class="jumbotron" style="background-color:cornflowerblue !important" >
+    <h1>Ringside Boxing</h1>
+    <p class="lead">Ringside Boxing website with polls and articles</p>
     
 </div>
 
@@ -15,12 +15,7 @@
 
         <p><h2>@Html.ActionLink("Articles", "Index", "Articles")</h2></p>
         <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Articles.ElementAt(0).ArticleTitle)
-                </th>
-                <th></th>
-            </tr>
+
 
             @foreach (var item in Model.Articles)
             {
@@ -30,7 +25,8 @@
                     </td>
 
                     <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.ArticleID })
+                        @Html.ActionLink("Read Article", "Details", "Articles", new { id = item.ArticleID }, null)
+
                     </td>
                 </tr>
             }
@@ -42,13 +38,7 @@
 
         <p><h2>@Html.ActionLink("Polls", "Index", "Polls")</h2></p>
         <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Polls.ElementAt(0).PollName)
-                </th>
 
-                <th></th>
-            </tr>
 
             @foreach (var item in Model.Polls)
             {
@@ -58,7 +48,9 @@
                     </td>
 
                     <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.PollID})
+                        @Html.ActionLink("View Poll Votes", "ShowAllVotes", "Polls", new { id = item.PollID},null)
+
+
                     </td>
                 </tr>
             }
@@ -68,28 +60,32 @@
     </div>
     <div class="col-md-4">
         <h2>News</h2>
-
         <table class="table">
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Articles.ElementAt(0).ArticleTitle)
-                </th>
-
-                <th></th>
+                <td>
+                    <a href="https://www.boxinginsider.com/headlines/famed-kronk-gym-destroyed-fire/">Famed Kronk Gym Destroyed By Fire</a>
+                </td>
             </tr>
-
-            @foreach (var item in Model.Articles)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ArticleTitle)
-                    </td>
-
-                    <td>
-                        @Html.ActionLink("Details", "Details", new { id = item.ArticleID }) 
-                    </td>
-                </tr>
-            }
+            <tr>
+                <td>
+                    <a href="https://www.boxinginsider.com/columns/saul-canelo-alvarez-deserve-rematch-ggg-golovkin/">Does Saul “Canelo” Alvarez Deserve a Rematch with GGG Golovkin</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.boxinginsider.com/headlines/42223/">All Trained by Their Father </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.boxinginsider.com/columns/vitali-klitschko-hints-return-ring-anthony-joshua/">Vitali Klitschko Hints At Return To The Ring Against Anthony Joshua</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.boxinginsider.com/headlines/daniel-jacobs-set-headline-hbo-card/">Daniel Jacobs Set To Headline HBO Card</a>
+                </td>
+            </tr>
 
         </table>
 

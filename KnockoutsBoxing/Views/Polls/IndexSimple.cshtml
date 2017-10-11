@@ -4,27 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>List of All Polls</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Poll", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.PollName)
+           <p>Poll Name</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PollCreationDate)
+            <p>Boxer</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PollBoxer1)
+            <p>Boxer</p>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PollBoxer2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PollClosingDate)
+            <p>Poll Closing Date</p>
         </th>
         <th></th>
     </tr>
@@ -33,9 +30,6 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.PollName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PollCreationDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PollBoxer1)

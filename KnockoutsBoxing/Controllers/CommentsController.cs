@@ -69,6 +69,8 @@ namespace KnockoutsBoxing.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CommentID,CommentContent,CommentAuthor,ArticleID")] Comment comment)
         {
+            var user = User.Identity.Name;
+            comment.CommentCreatedBy = user;
             if (ModelState.IsValid)
             {
                 db.Comments.Add(comment);

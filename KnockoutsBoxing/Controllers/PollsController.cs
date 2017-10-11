@@ -84,6 +84,7 @@ namespace KnockoutsBoxing.Controllers
         {
             var user = User.Identity.Name;
             poll.PollCreatedBy = user;
+            poll.PollCreationDate = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.Polls.Add(poll);
