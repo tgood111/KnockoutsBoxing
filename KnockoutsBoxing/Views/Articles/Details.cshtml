@@ -5,43 +5,13 @@
 }
 
 
-<div>
-    <h4>Article</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            <p>Article Title</p>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ArticleTitle)
-        </dd>
-
-        <dt>
-            <p>Article Created</p>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ArticleCreationDate)
-        </dd>
-
-        <dt>
-            <p>Author</p>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ArticleAuthor)
-        </dd>
-
-        <dt>
-            <p>Content</p>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ArticleContent)
-        </dd>
-
-    </dl>
+<div align="center">
+    <h4>@Html.DisplayFor(model => model.ArticleTitle)</h4>
+    <h5>By - @Html.DisplayFor(model => model.ArticleAuthor) - Date - @Html.DisplayFor(model => model.ArticleCreationDate)</h5>
+    <img src="~/Content/images/@Model.ImageFileName" class="img-responsive" alt="Cinque Terre" width="800" height="650" />
+    <p>Phot By SomeGuy</p>
+    <p>@Html.DisplayFor(model => model.ArticleContent)</p>
+    
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ArticleID }) |

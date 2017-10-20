@@ -10,6 +10,8 @@
 
         public string CommentCreatedBy { get; set; }
 
+        public bool FlagComment { get; set; }
+
         //Foreign Key
         public int ArticleID { get; set; }
 

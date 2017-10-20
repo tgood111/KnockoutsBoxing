@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -19,6 +20,11 @@ namespace KnockoutsBoxing.Models
         public string ArticleContent { get; set; }
 
         public string ArticleCreatedBy { get; set; }
+
+        public string ImageFileName { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase imagefile { get; set; }
 
         //Collection of foreign keys
         public virtual ICollection<Comment> Comments { get; set; }

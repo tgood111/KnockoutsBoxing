@@ -9,11 +9,12 @@ using System.Web.Mvc;
 
 namespace KnockoutsBoxing.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    
     public class AdminController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: Admin
+        [Authorize(Roles = "Administrator")]
         public ActionResult Index()
         {
             //var listofallusers = db.Users.OrderBy(x => x.Email);
@@ -53,15 +54,32 @@ namespace KnockoutsBoxing.Controllers
             return View(listofallusers);
         }
 
+        [Authorize(Roles = "Administrator")]
         public ActionResult ListOfAllUsers()
         {
             //var listofallusers = db.Users.OrderBy(x => x.Email);
             var listofallusers = db.Users.OrderBy(x => x.Email);
             int count = listofallusers.Count();
+            var selectedusers = listofallusers.Where(x => x.Roles.Count > 0);
 
-            return View(listofallusers);
+            return View(selectedusers);
         }
 
+        //UserWithOutApproval
+        //Original ListOfAllUsers
+        [Authorize(Roles = "Moderator,Administrator")]
+        public ActionResult UserWithOutApproval()
+        {
+            //var listofallusers = db.Users.OrderBy(x => x.Email);
+            var listofallusers = db.Users.OrderBy(x => x.Email);
+            int count = listofallusers.Count();
+            //var currentusercomments = from comment in allcomments where comment.CommentCreatedBy == currentuser select comment;
+            var selectedusers = listofallusers.Where(x => x.Roles.Count == 0);
+
+            return View(selectedusers);
+        }
+
+        [Authorize(Roles = "Administrator,Moderator")]
         public ActionResult ListOfAllUsersModerator()
         {
             //var listofallusers = db.Users.OrderBy(x => x.Email);
@@ -71,6 +89,7 @@ namespace KnockoutsBoxing.Controllers
             return View(listofallusers);
         }
 
+        [Authorize(Roles = "Administrator")]
         //@Html.ActionLink("Ban User", "BanUser", new { UserName = item.UserName}) |
         public async Task<ActionResult> BanUser(string UserName)
         {
@@ -105,19 +124,29 @@ namespace KnockoutsBoxing.Controllers
 
         //   @Html.ActionLink("Remove Ban", "RemoveBanUser", new { UserName = item.UserName})
 
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> RemoveBanUser(string UserName)
         {
             //first I would like to get the User whom's role I want to see
             var CurrentUser = UserManager.Users.First(u => u.UserName.Equals(UserName));
-            
+
             //Important Note - if phone number is 9999999999 user is blocked
             //changing it to something else makes is nonblocked
             //this is used in Login method of AccountController
-            await UserManager.SetPhoneNumberAsync(CurrentUser.UserName, "");
+            //await UserManager.SetPhoneNumberAsync(CurrentUser.UserName, "");
+            try
+            {
+                var result = await UserManager.SetPhoneNumberAsync(CurrentUser.Id, "");
+            }
+            catch
+            {
+                string temp = "something went wrong";
+            }
             return View();
 
         }
 
+        [Authorize(Roles = "Administrator")]
         //public async Task<ActionResult> UserDetails(string UserName)
         public async Task<ActionResult> UserDetails(string UserName)
         {
@@ -150,7 +179,7 @@ namespace KnockoutsBoxing.Controllers
         #region Role Change 
         //public async Task<ActionResult> UserUpgradeToCanSee(string UserName)
         //ChangeToAdmin
-
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> ChangeToAdmin(string UserName)
         {
             //first I would like to get the User whom's role I want to see
@@ -183,7 +212,7 @@ namespace KnockoutsBoxing.Controllers
 
             return View();
         }//end of ChangeToAdmin
-
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> ChangeToModerator(string UserName)
         {
             //first I would like to get the User whom's role I want to see
@@ -216,7 +245,7 @@ namespace KnockoutsBoxing.Controllers
 
             return View();
         }//end of ChangeToModerator
-
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> ChangeToPromotor(string UserName)
         {
             //first I would like to get the User whom's role I want to see
@@ -249,7 +278,7 @@ namespace KnockoutsBoxing.Controllers
 
             return View();
         }//end of ChangeToPromotor
-
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> ChangeToBoxer(string UserName)
         {
             //first I would like to get the User whom's role I want to see
@@ -282,7 +311,7 @@ namespace KnockoutsBoxing.Controllers
 
             return View();
         }//end of ChangeToBoxer
-
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> ChangeToFan(string UserName)
         {
             //first I would like to get the User whom's role I want to see

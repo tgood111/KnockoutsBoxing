@@ -1,0 +1,23 @@
+﻿@model IEnumerable<KnockoutsBoxing.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Admin Panel";
+}
+
+
+<p>List of all users who need approval</p>
+<p>These users are registered but they need approval before they can access site sections</p>
+
+@foreach (var item in Model)
+{
+    <li><p>@item.UserName  | 
+           @Html.ActionLink("User Details", "UserDetails", new { UserName = item.UserName }) |
+           @Html.ActionLink("Change to Fan", "ChangeToFan", new { UserName = item.UserName }) |
+           @Html.ActionLink("Change to Boxer", "ChangeToBoxer", new { UserName = item.UserName }) |
+           @Html.ActionLink("Change to Moderator", "ChangeToModerator", new { UserName = item.UserName }) |
+           @Html.ActionLink("Change to Admin", "ChangeToAdmin", new { UserName = item.UserName }) |
+           @Html.ActionLink("Change to Promotor", "ChangeToPromotor", new { UserName = item.UserName } ) |
+           @Html.ActionLink("Ban User", "BanUser", new { UserName = item.UserName }) |
+           @Html.ActionLink("Remove Ban", "RemoveBanUser", new { UserName = item.UserName })
+           </p></li>
+}
+

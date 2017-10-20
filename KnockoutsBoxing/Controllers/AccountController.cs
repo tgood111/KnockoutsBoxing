@@ -180,7 +180,7 @@ namespace KnockoutsBoxing.Controllers
                 {
                     //add a identity role called "Fan"
                     
-                    result = UserManager.AddToRole(user.Id, "Fan");
+                    //result = UserManager.AddToRole(user.Id, "Fan");
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

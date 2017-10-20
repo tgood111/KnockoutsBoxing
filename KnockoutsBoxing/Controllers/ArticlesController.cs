@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using KnockoutsBoxing.Models;
 using Microsoft.AspNet.Identity;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace KnockoutsBoxing.Controllers
 {
@@ -64,6 +66,39 @@ namespace KnockoutsBoxing.Controllers
             return View(article);
         }
 
+        // GET: Comments/Details/5
+        public ActionResult CommentDetails(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Comment comment = db.Comments.Find(id);
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+            return View(comment);
+        }
+
+        // GET: Articles/Details/5
+        //public async Task<ActionResult> ChangeToBoxer(string UserName)
+        public async Task<ActionResult> FlagComment(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Comment comment = db.Comments.Find(id);
+            comment.FlagComment = true;
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+            await db.SaveChangesAsync();
+            return View(comment);
+        }
+
         // GET: Articles/Create
         public ActionResult Create()
         {
@@ -75,12 +110,21 @@ namespace KnockoutsBoxing.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ArticleID,ArticleTitle,ArticleCreationDate,ArticleAuthor,ArticleContent")] Article article)
+        public ActionResult Create([Bind(Include = "ArticleID,ArticleTitle,ArticleCreationDate,ArticleAuthor,ArticleContent,imagefile")] Article article)
         {
             var user = User.Identity.Name;
             article.ArticleCreatedBy = user;
             article.ArticleCreationDate = DateTime.Now;
             article.ArticleAuthor = user;
+            //location
+            //var filename1 = Path.GetFileName(article.imagefile.FileName);
+            var filename1 = Path.GetFileNameWithoutExtension(article.imagefile.FileName);
+            filename1 = filename1 + DateTime.Now.Ticks;
+            var extensionoffile = Path.GetExtension(article.imagefile.FileName);
+            filename1 = filename1 + extensionoffile;
+            var SaveLocation = Path.Combine(Server.MapPath("~/Content/images"), filename1);
+            article.ImageFileName = filename1;
+            article.imagefile.SaveAs(SaveLocation);
             if (ModelState.IsValid)
             {
                 db.Articles.Add(article);
@@ -173,6 +217,7 @@ namespace KnockoutsBoxing.Controllers
 
             return View(listofcomments.ToList());
         }
+
 
 
         //GET method

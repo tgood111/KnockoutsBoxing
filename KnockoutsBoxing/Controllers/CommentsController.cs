@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using KnockoutsBoxing.Models;
+using System.Threading.Tasks;
 
 namespace KnockoutsBoxing.Controllers
 {
@@ -28,6 +29,30 @@ namespace KnockoutsBoxing.Controllers
             var comments = db.Comments.Include(c => c.Article);
             return View(comments.ToList());
         }
+
+        public async Task<ActionResult> UnFlagComment(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Comment comment = db.Comments.Find(id);
+            comment.FlagComment = false;
+            if (comment == null)
+            {
+                return HttpNotFound();
+            }
+            await db.SaveChangesAsync();
+            return View(comment);
+        }
+
+        //ListOfAllComments
+        public ActionResult ListOfAllFlaggedComments()
+        {
+            var comments = db.Comments.Include(c => c.Article);
+            return View(comments.ToList());
+        }
+
 
         //ListOfAllCommentsUser
         public ActionResult ListOfAllCommentsUser()

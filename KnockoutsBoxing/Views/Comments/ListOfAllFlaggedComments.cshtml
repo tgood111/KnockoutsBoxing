@@ -1,0 +1,52 @@
+﻿@model IEnumerable<KnockoutsBoxing.Models.Comment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p></p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Article.ArticleTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentContent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentAuthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlagComment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Article.ArticleTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommentAuthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlagComment)
+        </td>
+        <td>
+            @if (item.FlagComment == true)
+            {
+                @Html.ActionLink("UnFlag Comment", "UnFlagComment", new { id = item.CommentID })
+            }
+
+           
+        </td>
+    </tr>
+}
+
+</table>
